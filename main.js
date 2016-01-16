@@ -11,8 +11,8 @@ var weatherURL;
 function init() {
 	$('#wButton').on('click' , grabWeather);
 	$.get(apiURL + '/geolookup/q/autoip.json', geoWeather)
-	
-	
+
+
 }
 
 var geoWeather = function(response){
@@ -21,9 +21,7 @@ var geoWeather = function(response){
 	zip = response.location.zip;
 	var city = response.location.city;
 	var state = response.location.state;
-	console.log(zip);
-	console.log(city);
-	console.log(state);
+
 	$('#myLocation').text( city + " , " +state +' Local Weather' )
 	$.get(apiURL + 'forecast/q/' + zip + '.json' , weatherForcast);
 }
@@ -39,7 +37,7 @@ function weatherUpdate(){
 	var todaysForcast = forcastResponse.forecast.txt_forecast.forecastday[0];
 	var todaysText = todaysForcast.fcttext;
 	var todaysIcon = $('<img/>', {src: todaysForcast.icon_url});
-	$('.todays .icon').append(todaysIcon);
+	$('.2daysforcast .icon').append(todaysIcon);
 	$('.weather').text(todaysText);
 }
 

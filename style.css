@@ -12,5 +12,6 @@ body{
   border: 5px solid white;
   display: inline-block;
   margin-top: 20px;
-  
+  height: 400px;
+  width:  450px;
 }

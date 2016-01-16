@@ -1,0 +1,16 @@
+body{
+	background-color: black;
+	color: White; 
+	text-align: center;
+}
+#zip{
+	width: 950px;
+	color: black;
+}
+.col-xs-3 {
+  float:none;
+  border: 5px solid white;
+  display: inline-block;
+  margin-top: 20px;
+  
+}
